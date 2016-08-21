@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <block name="title"><title>标题</title></block>
+
+    <link rel="stylesheet" href="/Application/Home/Public/css/mui.min.css">
+    <link rel="stylesheet" href="/Application/Home/Public/css/custom-theme.css">
+    <link rel="stylesheet" href="/Application/Home/Public/css/global.css">
+    <link rel="stylesheet" href="/Application/Home/Public/css/iconfont.css">
+
+    <script src="/Application/Home/Public/js/mui.min.js"></script>
+
+</head>
+<body>
+<header class="mui-bar mui-bar-nav theme-nav-color">
+    <button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left">
+        <span class="mui-icon mui-icon-left-nav"></span>
+        返回
+    </button>
+
+    <img class="mui-btn mui-btn-link mui-btn-nav mui-pull-right logo" src="/Application/Home/Public/image/logo_zh.png">
+
+
+</header>
+
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item mui-active" href="#tabbar">
+        <span class="mui-icon iconfont icon-route"></span>
+        <span class="mui-tab-label">行程</span>
+    </a>
+    <a class="mui-tab-item" href="#tabbar-with-chat">
+        <span class="mui-icon iconfont icon-route-collection"></span>
+        <span class="mui-tab-label">行程日记</span>
+    </a>
+    <a class="mui-tab-item" href="#tabbar-with-contact">
+        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-tab-label">我</span>
+    </a>
+    <a class="mui-tab-item" href="/index/setting">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">设置</span>
+    </a>
+</nav>
+
+<block name="mui-content">内容区域</block>
+
+</body>
+</html>

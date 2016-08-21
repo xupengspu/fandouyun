@@ -1,0 +1,12 @@
+.logo{width: 80px; margin-top: 8px !important;}
+.search-box{padding: 5px 30px 0;}
+.left-icon-box{position: absolute;top: 15px;left: 20px;}
+.right-icon-box{position: absolute;top: 32px;right: 0px;}
+.right-icon-box .iconfont,.left-icon-box .iconfont{  color: #797979;}
+.traffic-icons{position:absolute;top:5px; right:40px;max-width: 200px !important;}
+.traffic-icons img{width: 24px !important; height: 24px !important; line-height: 24px !important; margin-left: 4px !important;}
+.traffic-price{position: absolute;right: 40px;top: 28px;max-width: 200px !important;font-family: 'Helvetica Neue', Helvetica, sans-serif;color: deeppink;font-weight: 400 !important;font-size: 13px;}
+.handler-box{margin: 30px 0;}
+.handler-box p{padding: 5px 10px;}
+.handler-box .handler-btn{display: block;padding: 15px;border-width: 1px 0 1px 0;border-style: solid;border-color: #c8c7cc;}
+.handler-box .handler-btn:active{background-color:#f7f7f7; }

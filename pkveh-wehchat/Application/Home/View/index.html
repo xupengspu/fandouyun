@@ -1,0 +1,167 @@
+<extend name="./base.html" />
+<block name="mui-content">
+    <div class="mui-content">
+
+        <form class="mui-input-group">
+            <!-- 搜索区域开始 -->
+            <div class="search-box">
+                <div class="mui-input-row">
+                    <input type="text" class="mui-input-clear" placeholder="当前位置">
+                </div>
+                <div class="mui-input-row">
+                    <input type="password" class="mui-input-clear" placeholder="目的地">
+                </div>
+
+                <div class="mui-input-row">
+
+                    <button class="mui-btn mui-btn-primary" style="width: 100% ;margin-top: 5px;padding: 5px 10px;">
+                        <span class="mui-icon mui-icon-search"></span>
+                        规划线路
+                    </button>
+
+                </div>
+                <div class="left-icon-box">
+                    <span class="mui-icon iconfont icon-position"></span><br/>
+                    <span class="mui-icon iconfont icon-dotted-line"></span><br/>
+                    <span class="mui-icon iconfont icon-yuan"></span>
+                </div>
+
+                <div class="right-icon-box">
+                    <span class="mui-icon iconfont icon-exchange" style="font-size: 24px;"></span>
+                </div>
+            </div>
+            <!-- 搜索区域结束 -->
+
+
+            <!--搜索列表区域-->
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-hidden">cared
+                    <div id="M_Toggle" class="mui-switch mui-active">
+                        <div class="mui-switch-handle"></div>
+                    </div>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a class="mui-navigate-right" href="#">
+                    <span class="mui-media-object  traffic-icons">
+                        <img src="/Application/Home/Public/image/car.png">
+                        <img src="/Application/Home/Public/image/car.png">
+                    </span>
+
+                        <span class="mui-media-object traffic-price">￥1290</span>
+
+                        <div class="mui-media-body">
+                            步行至南京东路
+                            <p class='mui-ellipsis'>1hrs 20min</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a class="mui-navigate-right" href="#">
+                    <span class="mui-media-object  traffic-icons">
+                        <img src="/Application/Home/Public/image/traffic.png">
+                        <img src="/Application/Home/Public/image/car.png">
+                    </span>
+
+                        <span class="mui-media-object traffic-price">￥1290</span>
+
+                        <div class="mui-media-body">
+                            步行至南京东路
+                            <p class='mui-ellipsis'>1h 20min</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a class="mui-navigate-right" href="#">
+                    <span class="mui-media-object  traffic-icons">
+                        <img src="/Application/Home/Public/image/traffic.png">
+                        <img src="/Application/Home/Public/image/car.png">
+                    </span>
+
+                        <span class="mui-media-object traffic-price">￥1290</span>
+
+                        <div class="mui-media-body">
+                            步行至南京东路
+                            <p class='mui-ellipsis'>1h 20min</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a class="mui-navigate-right" href="#">
+                    <span class="mui-media-object  traffic-icons">
+                        <img src="/Application/Home/Public/image/traffic.png">
+                        <img src="/Application/Home/Public/image/car.png">
+                    </span>
+
+                        <span class="mui-media-object traffic-price">￥1290</span>
+
+                        <div class="mui-media-body">
+                            步行至南京东路
+                            <p class='mui-ellipsis'>1h 20min</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a class="mui-navigate-right" href="#">
+                    <span class="mui-media-object  traffic-icons">
+                        <img src="/Application/Home/Public/image/traffic.png">
+                        <img src="/Application/Home/Public/image/car.png">
+                    </span>
+
+                        <span class="mui-media-object traffic-price">￥1290</span>
+
+                        <div class="mui-media-body">
+                            步行至南京东路
+                            <p class='mui-ellipsis'>1h 20min</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a class="mui-navigate-right" href="#">
+                    <span class="mui-media-object  traffic-icons">
+                        <img src="/Application/Home/Public/image/traffic.png">
+                        <img src="/Application/Home/Public/image/car.png">
+                    </span>
+
+                        <span class="mui-media-object traffic-price">￥1290</span>
+
+                        <div class="mui-media-body">
+                            步行至南京东路
+                            <p class='mui-ellipsis'>1h 20min</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!--搜索列表区域-->
+            <!--地图呀-->
+            <div id="mapid" style="height: 150px"></div>
+            <!--地图呀-->
+
+            <!---->
+            <div class="handler-box">
+                <p>行程</p>
+                <span class="handler-btn">加入行程日记</span>
+            </div>
+
+        </form>
+    </div>
+    <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+
+    <script>
+        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+            maxZoom: 18,
+            attribution: '',
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+
+
+        L.marker([51.5, -0.09]).addTo(mymap)
+                .bindPopup("我的位置>").openPopup();
+
+    </script>
+</block>
+
+
+
+
